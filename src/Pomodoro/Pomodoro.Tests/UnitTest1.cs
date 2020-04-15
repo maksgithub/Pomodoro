@@ -11,6 +11,11 @@ namespace Pomodoro.Tests
         {
             var c = new Class1();
             Assert.IsNotNull(c);
+            
+            
+            
+            
+            
         }
     }
 }
