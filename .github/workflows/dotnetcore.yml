@@ -19,11 +19,11 @@ jobs:
       uses: actions/setup-dotnet@v1
       with:
         dotnet-version: 3.1.101
-    - name: ls_dir
-      run: ls -R
+    - name: Install dependencies
+      run: dotnet restore
       working-directory: ${{env.working-directory}}
     - name: Build
-      run: dotnet build --configuration Release -restore
+      run: dotnet build --configuration Release --no-restore
       working-directory: ${{env.working-directory}}
     - name: Test
       run: dotnet test --no-restore --verbosity normal
