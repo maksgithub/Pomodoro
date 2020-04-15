@@ -11,7 +11,7 @@ jobs:
 
     runs-on: ubuntu-latest
     env:
-      working-directory: ./src/Pomodoro
+      working-directory: /src/Pomodoro
 
     steps:
     - uses: actions/checkout@v2
@@ -20,6 +20,6 @@ jobs:
       with:
         dotnet-version: 3.1.101
     - name: Build
-      run: dotnet build --configuration Release --no-restore
+      run: dotnet build --configuration Release -restore
     - name: Test
       run: dotnet test --no-restore --verbosity normal
