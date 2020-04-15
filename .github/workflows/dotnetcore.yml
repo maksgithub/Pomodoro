@@ -14,12 +14,17 @@ jobs:
       working-directory: /src/Pomodoro
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v2    
     - name: Setup .NET Core
       uses: actions/setup-dotnet@v1
       with:
         dotnet-version: 3.1.101
+    - name: ls_dir
+      run: ls -R
+      working-directory: ${{env.working-directory}}
     - name: Build
       run: dotnet build --configuration Release -restore
+      working-directory: ${{env.working-directory}}
     - name: Test
       run: dotnet test --no-restore --verbosity normal
+      working-directory: ${{env.working-directory}}
