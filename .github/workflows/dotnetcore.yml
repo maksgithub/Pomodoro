@@ -25,14 +25,10 @@ jobs:
         dotnet-version: 3.1.101
     - name: Update Submodules 
       run: git submodule update --init --recursive
+    - uses: nuget/setup-nuget@v1
+      with:
+        nuget-version: '5.x'
       
-    - task: NuGetCommand@2
-      displayName: NuGet restore
-      inputs:
-        command: 'restore'
-        includeNuGetOrg: true
-        restoreSolution: '**/*.sln'
-        
     - name: Install dependencies
       run: dotnet restore
       working-directory: ${{env.working-directory}}
