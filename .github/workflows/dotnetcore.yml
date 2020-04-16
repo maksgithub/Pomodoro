@@ -25,12 +25,22 @@ jobs:
         dotnet-version: 3.1.101
     - name: Update Submodules 
       run: git submodule update --init --recursive
+      
+    - uses: nuget/setup-nuget@v1
+      with:
+        nuget-version: '5.x'
+      
+    - run: nuget restore Pomodoro.sln
+      working-directory: ${{env.working-directory}}
+      
     - name: Install dependencies
       run: dotnet restore
       working-directory: ${{env.working-directory}}
+      
     - name: Build
       run: dotnet build --configuration Release --no-restore
       working-directory: ${{env.working-directory}}
+      
     - name: Test
       run: dotnet test --no-restore --verbosity normal
       working-directory: ${{env.working-directory}}
