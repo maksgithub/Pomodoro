@@ -23,6 +23,8 @@ jobs:
       uses: actions/setup-dotnet@v1
       with:
         dotnet-version: 3.1.101
+    - name: Update Submodules 
+      run: git submodule update --init --recursive
     - name: Install dependencies
       run: dotnet restore
       working-directory: ${{env.working-directory}}
