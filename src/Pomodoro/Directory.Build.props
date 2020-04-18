@@ -15,6 +15,7 @@
     <ProductVersion>$(AssemblyVersion)</ProductVersion>	
     <Version>$(AssemblyVersion)</Version>
     <FileVersion>$(AssemblyVersion)</FileVersion>-->
+    <RuntimeIdentifier>win10-x64</RuntimeIdentifier>
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <RuntimeIdentifiers>win10-x64;osx-x64;ubuntu-x64</RuntimeIdentifiers>
     <!--<RuntimeIdentifier>osx-x64</RuntimeIdentifier>
