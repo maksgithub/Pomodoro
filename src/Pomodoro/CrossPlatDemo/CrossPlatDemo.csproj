@@ -4,9 +4,7 @@
     <OutputType>WinExe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <PublishSingleFile>true</PublishSingleFile>
-    <RuntimeIdentifier>win-x64</RuntimeIdentifier>
-     <RuntimeIdentifier>linux-x64</RuntimeIdentifier>
-     <RuntimeIdentifier>osx-x64</RuntimeIdentifier>
+    <RuntimeIdentifiers>win10-x64;osx-x64;ubuntu-x64</RuntimeIdentifiers>
     <Platforms>x64</Platforms>
     <!-- <ApplicationIcon>chromely.ico</ApplicationIcon>-->
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
@@ -19,7 +17,7 @@
     <PackageReference Include="System.Buffers" Version="4.5.0" />
     <PackageReference Include="System.Drawing.Common" Version="4.5.1" />
   </ItemGroup>
-  
+
   <ItemGroup>
     <None Update="app\pages\home.html">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
