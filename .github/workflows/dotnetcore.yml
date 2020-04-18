@@ -15,13 +15,13 @@ jobs:
         os: [macos-latest, ubuntu-latest, windows-latest]
         include:          
           - os: macos-latest
-            TARGET: x86_64-apple-darwin
+            runtime-identifier: osx-x64
 
-        - os: ubuntu-latest
-          TARGET: armv7-unknown-linux-musleabihf
+          - os: ubuntu-latest
+            runtime-identifier: ubuntu-x64
           
-        - os: windows-latest
-          TARGET: x86_64-unknown-linux-musl
+          - os: windows-latest
+            runtime-identifier: win10-x64
     
     env:
       working-directory: ./src/Pomodoro
@@ -48,9 +48,9 @@ jobs:
       working-directory: ${{env.working-directory}}
       
     - name: Build
-      run: dotnet build --configuration Release --no-restore --runtime ${{env.runtime-identifier}}
+      run: dotnet build --configuration Release --no-restore --runtime ${{matrix.runtime-identifier}}
       working-directory: ${{env.working-directory}}
       
     - name: Test
-      run: dotnet test --no-restore --verbosity normal --runtime ${{env.runtime-identifier}}
+      run: dotnet test --no-restore --verbosity normal --runtime ${{matrix.runtime-identifier}}
       working-directory: ${{env.working-directory}}
