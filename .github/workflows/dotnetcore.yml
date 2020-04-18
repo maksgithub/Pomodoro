@@ -16,7 +16,7 @@ jobs:
     
     env:
       working-directory: ./src/Pomodoro
-      runtime-identifier: linux-x64 
+      runtime-identifier: osx-x64
 
     steps:
     - uses: actions/checkout@v2    
