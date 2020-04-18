@@ -16,6 +16,7 @@ jobs:
     
     env:
       working-directory: ./src/Pomodoro
+      runtime-identifier: linux-x64 
 
     steps:
     - uses: actions/checkout@v2    
@@ -38,9 +39,9 @@ jobs:
       working-directory: ${{env.working-directory}}
       
     - name: Build
-      run: dotnet build --configuration Release --no-restore
+      run: dotnet build --configuration Release --no-restore --runtime ${{env.runtime-identifier}}
       working-directory: ${{env.working-directory}}
       
     - name: Test
-      run: dotnet test --no-restore --verbosity normal
+      run: dotnet test --no-restore --verbosity normal --runtime ${{env.runtime-identifier}}
       working-directory: ${{env.working-directory}}
