@@ -16,6 +16,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionItems", "SolutionIt
 		Directory.Build.props = Directory.Build.props
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ImageEditor", "ImageEditor", "{818380D1-2AB1-4D1F-A59F-066F345FABBD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageEditor.Run", "ImageEditor.Run\ImageEditor.Run.csproj", "{EE5619BF-96FE-48D2-9E6D-327E3F488FF3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -38,9 +42,16 @@ Global
 		{A0E65C54-FBDC-4496-9124-94440ED69322}.Debug|x64.Build.0 = Debug|x64
 		{A0E65C54-FBDC-4496-9124-94440ED69322}.Release|x64.ActiveCfg = Release|x64
 		{A0E65C54-FBDC-4496-9124-94440ED69322}.Release|x64.Build.0 = Release|x64
+		{EE5619BF-96FE-48D2-9E6D-327E3F488FF3}.Debug|x64.ActiveCfg = Debug|x64
+		{EE5619BF-96FE-48D2-9E6D-327E3F488FF3}.Debug|x64.Build.0 = Debug|x64
+		{EE5619BF-96FE-48D2-9E6D-327E3F488FF3}.Release|x64.ActiveCfg = Release|x64
+		{EE5619BF-96FE-48D2-9E6D-327E3F488FF3}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{EE5619BF-96FE-48D2-9E6D-327E3F488FF3} = {818380D1-2AB1-4D1F-A59F-066F345FABBD}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1D046F75-8280-4E9E-BF9A-1C878F47C25F}
