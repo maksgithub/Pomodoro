@@ -13,9 +13,19 @@ jobs:
     strategy:
       matrix:
         os: [macos-latest, ubuntu-latest, windows-latest]
+        include:          
+          - os: macos-latest
+            runtime-identifier: osx-x64
+
+          - os: ubuntu-latest
+            runtime-identifier: ubuntu-x64
+          
+          - os: windows-latest
+            runtime-identifier: win10-x64
     
     env:
       working-directory: ./src/Pomodoro
+      runtime-identifier: osx-x64
 
     steps:
     - uses: actions/checkout@v2    
@@ -38,9 +48,9 @@ jobs:
       working-directory: ${{env.working-directory}}
       
     - name: Build
-      run: dotnet build --configuration Release --no-restore
+      run: dotnet build --configuration Release --no-restore --runtime ${{matrix.runtime-identifier}}
       working-directory: ${{env.working-directory}}
       
     - name: Test
-      run: dotnet test --no-restore --verbosity normal
+      run: dotnet test --no-restore --verbosity normal --runtime ${{matrix.runtime-identifier}}
       working-directory: ${{env.working-directory}}
