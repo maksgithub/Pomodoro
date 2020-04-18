@@ -3,7 +3,8 @@
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
     <!-- <ApplicationIcon>chromely.ico</ApplicationIcon>-->
-    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>   
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <RuntimeIdentifier>win10-x64</RuntimeIdentifier>
   </PropertyGroup>
 
   <ItemGroup>

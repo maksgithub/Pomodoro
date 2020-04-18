@@ -16,9 +16,9 @@
     <Version>$(AssemblyVersion)</Version>
     <FileVersion>$(AssemblyVersion)</FileVersion>-->
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <RuntimeIdentifier>win10-x64</RuntimeIdentifier>
-    <RuntimeIdentifier>osx-x64</RuntimeIdentifier>
-    <RuntimeIdentifier>ubuntu-x64</RuntimeIdentifier>
+    <RuntimeIdentifiers>win10-x64;osx-x64;ubuntu-x64</RuntimeIdentifiers>
+    <!--<RuntimeIdentifier>osx-x64</RuntimeIdentifier>
+    <RuntimeIdentifier>ubuntu-x64</RuntimeIdentifier>-->
     <Platforms>x64</Platforms>
     <GenerateAssemblyInfo>true</GenerateAssemblyInfo>    
     <RunAnalyzersDuringBuild>false</RunAnalyzersDuringBuild>
